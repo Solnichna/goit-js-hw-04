@@ -1,5 +1,12 @@
 function isEnoughCapacity(products, containerSize) {
-  
+  let totalProducts = 0;
+
+  for (product in products) {
+    if (products.hasOwnProperty(product)) {
+      totalProducts += products[product];
+    }
+  }
+  return totalProducts <= containerSize;
 }
 
 console.log(
